@@ -16,28 +16,28 @@ const Onboarding = () => {
     {
       title: "V60 dripper",
       content:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+        "One word - simplicity! The V60 producing very full taste of coffee with all its flavors. You can make bitter and sour coffee according to its origin.",
       img: "assets/v60-dripper.svg",
       isLastitem: false,
     },
     {
       title: "FrenchPress",
       content:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+        "Is the easiest brewer to master. It producing coffee with heaviest body of any brewing method. Rest coffee for a few minutes before serving.",
       img: "assets/frenchpress.svg",
       isLastitem: false,
     },
     {
       title: "Moka pot",
       content:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+        "Every home in Italy has a Moka Pot. It's the closest to an espresso at home. The moka pot produces very heavy, dense coffee with a little crema.",
       img: "assets/mokapot.svg",
       isLastitem: false,
     },
     {
       title: "AeroPress",
       content:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+        "Best friend on the road! You can make a great espresso wherever you are e.g. in a campsite, in a caravan or in nature... imagination does not end.",
       img: "assets/aeropress.svg",
       isLastitem: true,
     },

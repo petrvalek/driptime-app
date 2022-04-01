@@ -7,9 +7,9 @@ const Home = () => {
   let homeData = [
     {
       title: "Before you started",
-      content: "lorem ipsum",
+      content: "A few tips before you start dripping :-)",
       link: "/before-you-started",
-      img: "https://api.lorem.space/image/shoes?w=80&h=128",
+      img: "assets/driptime-logo.svg",
       side: true,
       fullWidth: true,
       textCenter: false,
@@ -76,10 +76,14 @@ const Home = () => {
                 >
                   {data.title}
                 </Card.Title>
-                <p>{data.content}</p>
+                <p className="text-sm ">{data.content}</p>
               </Card.Body>
               {data.fullWidth ? (
-                <Card.Image src={data.img} alt={data.title} />
+                <Card.Image
+                  src={data.img}
+                  alt={data.title}
+                  className="w-9/12"
+                />
               ) : (
                 ""
               )}
