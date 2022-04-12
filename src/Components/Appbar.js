@@ -20,10 +20,10 @@ const Appbar = (props) => {
     </svg>
   );
   return (
-    <div className="flex items-center mt-8 mb-8">
-      <Link to="/home">
+    <div className="flex items-center justify-center mt-2 mb-2">
+      <Link className="self-start flex-1" to="/home">
         <Button
-          className="self-start"
+          className="px-0 text-neutral"
           size="lg"
           variant="link"
           startIcon={backIcon}
@@ -31,8 +31,7 @@ const Appbar = (props) => {
           Home
         </Button>
       </Link>
-      <h1>{props.title}</h1>
-      <p>&nbsp;</p>
+      <h1 className="flex-auto">{props.title}</h1>
     </div>
   );
 };
