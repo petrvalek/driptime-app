@@ -31,5 +31,13 @@ p {
   padding-left: 0 !important;
 }
 
+.coffee-range {
+  writing-mode: vertical-rl;
+}
+
+.toggle-buttons.btn-group > .btn-active {
+  @apply font-semibold bg-Secondary text-neutral border-Secondary;
+}
+
 @tailwind components;
 @tailwind utilities;
