@@ -17,7 +17,7 @@ const Home = () => {
     {
       title: "V60 Dripper",
       content: "",
-      link: "/before-you-started",
+      link: "/v60-dripper",
       img: "assets/v60-dripper-single.svg",
       side: false,
       fullWidth: false,
@@ -26,7 +26,7 @@ const Home = () => {
     {
       title: "FrenchPress",
       content: "",
-      link: "/before-you-started",
+      link: "/frenchpress",
       img: "assets/frenchpress-single.svg",
       side: false,
       fullWidth: false,
@@ -35,7 +35,7 @@ const Home = () => {
     {
       title: "Moka pot",
       content: "",
-      link: "/before-you-started",
+      link: "/moka-pot",
       img: "assets/moka-pot-single.svg",
       side: false,
       fullWidth: false,
@@ -44,7 +44,7 @@ const Home = () => {
     {
       title: "Aeropress",
       content: "",
-      link: "/before-you-started",
+      link: "/aeropress",
       img: "assets/aeropress-single.svg",
       side: false,
       fullWidth: false,
@@ -56,10 +56,11 @@ const Home = () => {
     <div className="container">
       <h1 className="mt-10 text-lg">Choose your favourite tool</h1>
       <div className="grid grid-cols-2 gap-4 mt-6">
-        {homeData.map((data) => (
+        {homeData.map((data, index) => (
           <Link
             className={`${data.fullWidth ? "col-span-2" : ""}`}
             to={data.link}
+            key={index}
           >
             <Card className="bg-Background-Base-200" side={data.side} compact>
               <Card.Body>
@@ -82,7 +83,7 @@ const Home = () => {
                 <Card.Image
                   src={data.img}
                   alt={data.title}
-                  className="w-9/12"
+                  className="w-10/12"
                 />
               ) : (
                 ""

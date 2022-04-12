@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Onboarding from "./Onboarding";
 import Home from "./Home";
+import Dripping from "./Dripping";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="welcome" element={<Onboarding />} />
         <Route path="home" element={<Home />} />
+        <Route path=":permalink" element={<Dripping />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
