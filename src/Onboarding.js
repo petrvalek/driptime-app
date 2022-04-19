@@ -49,8 +49,8 @@ const Onboarding = () => {
       slidesPerView={1}
       pagination={{ clickable: true }}
     >
-      {onboardingScreens.map((data) => (
-        <SwiperSlide>
+      {onboardingScreens.map((data, i) => (
+        <SwiperSlide key={i}>
           <div className="container relative flex flex-col items-center justify-end h-screen pb-16">
             <img
               className="relative mx-auto mb-12"
