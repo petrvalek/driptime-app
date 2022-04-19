@@ -1,9 +1,29 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
-import { Button } from "react-daisyui";
+import "./index.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  Router,
+} from "react-router-dom";
+
+import Welcome from "./Welcome";
+import Onboarding from "./Onboarding";
+import Home from "./Home";
+import DripItem from "./DripItem";
 
 function App() {
+  const location = useLocation();
+
+  const [displayLocation, setDisplayLocation] = useState(location);
+  const [transitionStage, setTransistionStage] = useState("fadeIn");
+
+  useEffect(() => {
+    if (location !== displayLocation) setTransistionStage("fadeOut");
+  }, [location, displayLocation]);
+
   useEffect(() => {
     // only execute all the code below in client side
     if (typeof window !== "undefined") {
@@ -25,22 +45,23 @@ function App() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-end h-screen md:justify-center">
-      <img
-        className="relative mx-auto mt-16 mb-11"
-        src="assets/driptime-logo.svg"
-        alt="Driptime - Welcome"
-      />
-      <h1 className="mb-4 text-2xl">DripTime</h1>
-      <p className="mb-10 text-base text-center">
-        Your coffee helper <br />
-        in your pocket!
-      </p>
-      <Link to="/welcome">
-        <Button className="w-64 mb-11" color="primary" size="lg" fullWidth>
-          Explore & Taste
-        </Button>
-      </Link>
+    <div className="App">
+      <div
+        className={`${transitionStage}`}
+        onAnimationEnd={() => {
+          if (transitionStage === "fadeOut") {
+            setTransistionStage("fadeIn");
+            setDisplayLocation(location);
+          }
+        }}
+      >
+        <Routes location={displayLocation}>
+          <Route path="/" element={<Welcome />} />
+          <Route path="welcome" element={<Onboarding />} />
+          <Route path="home" element={<Home />} />
+          <Route path=":permalink" element={<DripItem />} />
+        </Routes>
+      </div>
     </div>
   );
 }
