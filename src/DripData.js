@@ -13,6 +13,24 @@ let DripData = [
     roughness: 3, // /5
     water: 250, // ml
     temperature: 95, // C
+    steps: {
+      totalTime: 150, // in sec -> 2,5 min
+      instructions: [
+        {
+          timing: 20,
+          content: "Dodatečně prolít horkou vodou papírový filtr.",
+        },
+        {
+          timing: 10,
+          content: "Výlít vodu z karafy",
+        },
+        {
+          timing: 15,
+          content:
+            "Zalijeme do cca 50 ml/g a důkladně promícháme kávu s vodou.",
+        },
+      ],
+    },
   },
   {
     name: "FrenchPress",
