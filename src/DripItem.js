@@ -74,7 +74,7 @@ const DripItem = () => {
             <Roughness intensity={DripData.roughness} />
           </div>
         </div>
-        <Link to="/#">
+        <Link to={`/${DripData.permalink}/steps`}>
           <Button
             className="w-64 mx-auto mb-11"
             color="primary"
