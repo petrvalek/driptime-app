@@ -39,6 +39,23 @@ p {
   @apply font-semibold bg-Secondary text-neutral border-Secondary;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.pie-chart {
+  @apply absolute w-12 h-12 rounded-full -left-1 -top-1 -z-10;
+  transition: background 0.3s ease;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+  animation: 0.5s fadeOut forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
