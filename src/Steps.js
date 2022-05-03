@@ -8,6 +8,7 @@ import { Countdown } from "react-daisyui";
 import { useCountdown } from "./hooks/useCountdown";
 import StepItem from "./Components/StepItem";
 
+
 const Steps = () => {
   let params = useParams();
   let DripData = getDripDataPermalink(params.permalink);
@@ -21,20 +22,17 @@ const Steps = () => {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStep(step + 1);
-    }, stepsArray[step].timing * 1000);
-
-    return () => clearInterval(interval);
+    let timing = (stepsArray[step].timing * 1000);
+    let interval = setInterval(() => {
+      if (step >= stepsArray.length) {
+        clearInterval(interval);
+      } else {
+        setStep(step => step + 1);
+      }
+    }, timing);
+    return () => clearInterval(interval); 
   }, []);
 
-  const handleActive = (item) => {
-    if (item === step) {
-      return true;
-    } else {
-      return false;
-    }
-  };
 
   return (
     <div className="container">
@@ -44,7 +42,6 @@ const Steps = () => {
         <span>:</span>
         <Countdown value={seconds} />
       </div>
-      {step}
       <div>
         {stepsArray.map((item, i) => (
           <div>
@@ -52,8 +49,8 @@ const Steps = () => {
               key={i}
               timer={item.timing}
               stepContent={item.content}
-              stepActive={handleActive(i)}
-            />
+              stepActive={step === i ? true : false}
+              />
           </div>
         ))}
       </div>
