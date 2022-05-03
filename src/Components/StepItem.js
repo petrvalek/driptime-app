@@ -7,6 +7,7 @@ const StepItem = (props) => {
   const [pie, setPie] = useState(timing - timing);
   const [timer, setTimer] = useState(props.timer);
   const active = props.stepActive;
+  const pause = props.stepPause;
   const PERCENT = 100 / timing;
 
   const successIcon = (
@@ -27,19 +28,21 @@ const StepItem = (props) => {
 
   // For percentage pie
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (timer > 0 && active) {
-        setPie((t) => PERCENT + t);
-        setTimer((t) => t - 1);
-      }
-    }, 1000);
+    if (!pause) {
+      const interval = setInterval(() => {
+        if (timer > 0 && active) {
+          setPie((t) => PERCENT + t);
+          setTimer((t) => t - 1);
+        }
+      }, 1000);
 
-    return () => clearInterval(interval);
-  }, [timing, timer, active, PERCENT]);
+      return () => clearInterval(interval);
+    }
+  }, [timing, timer, active, PERCENT, pause]);
 
   return (
     <div
-      className={`flex items-center mb-4 ${
+      className={`flex items-center mb-4 transition-opacity duration-300 ${
         active ? "opacity-100" : "opacity-50"
       }`}
     >
@@ -52,7 +55,7 @@ const StepItem = (props) => {
           {timer === 0 ? successIcon : timer}
         </span>
         <div
-          className="pie-chart"
+          className={`${timer === 0 ? "d-none" : "pie-chart"}`}
           style={{
             background: `conic-gradient(#f3c872 ${pie}%, #fdf6e8 0)`,
           }}
