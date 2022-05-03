@@ -1,5 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 
+function makeMeTwoDigits(n){
+  return (n < 10 ? "0" : "") + n;
+}
+
 const useCountdown = (totalTime) => {
   const timer = totalTime;
 
@@ -19,7 +23,7 @@ const useCountdown = (totalTime) => {
 
 const getReturnValues = (countDown) => {
   const minutes = Math.floor(countDown / 60);
-  const seconds = countDown % 60;
+  const seconds = makeMeTwoDigits(countDown % 60);
 
   return [minutes, seconds];
 };
