@@ -17,17 +17,42 @@ let DripData = [
       totalTime: 150, // in sec -> 2,5 min
       instructions: [
         {
-          timing: 20,
-          content: "Dodatečně prolít horkou vodou papírový filtr.",
+          timing: 15,
+          content: "Pour hot water over the paper filter.",
         },
         {
           timing: 10,
-          content: "Výlít vodu z karafy",
+          content: "Pour out the water from the container.",
+        },
+        {
+          timing: 10,
+          content:
+            "We pour the coffee into the V60 drip and the first preinfusion comes",
         },
         {
           timing: 15,
           content:
-            "Zalijeme do cca 50 ml/g a důkladně promícháme kávu s vodou.",
+            "Pour it up to approx. 50 ml / g and thoroughly mix the coffee with water.",
+        },
+        {
+          timing: 30,
+          content:
+            "After preinfusion, pour the coffee in the second pour in a circular motion to a total of 150 ml / g",
+        },
+        {
+          timing: 30,
+          content:
+            "Waiting... coffee is dripping :-)",
+        },
+        {
+          timing: 30,
+          content:
+            "In the third pour, we pour coffee again in a circular motion for as many cups as we need.",
+        },
+        {
+          timing: 10,
+          content:
+            "Enjoy your brew and taste your coffee!",
         },
       ],
     },
