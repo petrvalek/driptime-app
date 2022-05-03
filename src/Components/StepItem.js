@@ -15,14 +15,15 @@ const StepItem = (props) => {
       const interval = setInterval(() => {
         setPie((t) => PERCENT + t);
         setTimer((t) => t - 1);
+        setActive(true)
       }, 1000);
 
       return () => clearInterval(interval);
-    }
-  }, [timing, timer]);
+    } else (setActive(false))
+  }, [timing, timer, active, PERCENT]);
 
   return (
-    <div className={`flex items-center mb-4 ${active ? "" : "opacity-50"}`}>
+    <div className={`flex items-center mb-4 ${active ? "opacity-100" : "opacity-50"}`}>
       <div className="relative flex-none w-10 h-10 text-center rounded-full bg-base-200 font-patrick-hand">
         <span className="absolute left-0 right-0 mx-auto -translate-y-1/2 top-1/2">
           {timer}

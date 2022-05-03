@@ -13,25 +13,27 @@ const Steps = () => {
   let params = useParams();
   let DripData = getDripDataPermalink(params.permalink);
 
-  const [minutes, seconds] = useCountdown(DripData.steps.totalTime);
-  const [step, setStep] = useState(0);
-
-  const stepsArray = DripData.steps.instructions.map((item) => {
+  const stepsArray = DripData.steps.instructions.map((item, i) => {
     const object = { timing: item.timing, content: item.content };
     return object;
   });
 
+  const [minutes, seconds] = useCountdown(DripData.steps.totalTime);
+  const [step, setStep] = useState(0);
+  
   useEffect(() => {
-    let timing = (stepsArray[step].timing * 1000);
-    let interval = setInterval(() => {
-      if (step >= stepsArray.length) {
-        clearInterval(interval);
-      } else {
+    if (step < (stepsArray.length - 1)) {
+    const stepTiming = (stepsArray[step].timing * 1000); 
+    const interval = setTimeout(() => {
+      
         setStep(step => step + 1);
-      }
-    }, timing);
-    return () => clearInterval(interval); 
-  }, []);
+        
+      }, stepTiming);
+      
+      return () => clearInterval(interval); 
+    } 
+  
+  }, [step, stepsArray.length]);
 
 
   return (
@@ -42,16 +44,15 @@ const Steps = () => {
         <span>:</span>
         <Countdown value={seconds} />
       </div>
+        <div>{step}</div>
       <div>
         {stepsArray.map((item, i) => (
-          <div>
-            <StepItem
-              key={i}
-              timer={item.timing}
-              stepContent={item.content}
-              stepActive={step === i ? true : false}
-              />
-          </div>
+          <StepItem
+            key={i}
+            timer={item.timing}
+            stepContent={item.content}
+            stepActive={(step === i) ? true : false }
+          />
         ))}
       </div>
     </div>
