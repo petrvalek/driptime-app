@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 function makeMeTwoDigits(n){
   return (n < 10 ? "0" : "") + n;
@@ -8,15 +8,16 @@ const useCountdown = (totalTime) => {
   const timer = totalTime;
 
   const [countDown, setCountDown] = useState(timer);
-  // const intervalRef = useRef();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountDown((t) => t - 1);
+      if (countDown > 0) {
+        setCountDown((t) => t - 1);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [timer]);
+  }, [timer, countDown]);
 
   return getReturnValues(countDown);
 };
