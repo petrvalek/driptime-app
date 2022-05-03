@@ -12,7 +12,7 @@ const StepItem = (props) => {
   // For percentage pie
   useEffect(() => {
     const interval = setInterval(() => {
-      if (timer > -1 && active) {
+      if (timer > 0 && active) {
           setPie((t) => PERCENT + t);
           setTimer((t) => t - 1);
         } 
