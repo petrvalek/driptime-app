@@ -6,20 +6,19 @@ const StepItem = (props) => {
 
   const [pie, setPie] = useState(timing - timing);
   const [timer, setTimer] = useState(props.timer);
-  const [active, setActive] = useState(props.stepActive);
+  const active = props.stepActive;
   const PERCENT = 100 / timing;
 
   // For percentage pie
   useEffect(() => {
-    if (timer > 0 && active) {
-      const interval = setInterval(() => {
-        setPie((t) => PERCENT + t);
-        setTimer((t) => t - 1);
-        setActive(true)
-      }, 1000);
-
-      return () => clearInterval(interval);
-    } else (setActive(false))
+    const interval = setInterval(() => {
+      if (timer > -1 && active) {
+          setPie((t) => PERCENT + t);
+          setTimer((t) => t - 1);
+        } 
+        }, 1000);
+        
+        return () => clearInterval(interval);
   }, [timing, timer, active, PERCENT]);
 
   return (
