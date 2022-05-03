@@ -22,12 +22,12 @@ const Steps = () => {
   
   useEffect(() => {
     if (step < (stepsArray.length - 1)) {
-    const stepTiming = (stepsArray[step].timing * 1000) + 50; 
+    const stepTiming = (stepsArray[step].timing * 1000); 
     const interval = setTimeout(() => {
       
         setStep(step => step + 1);
         
-      }, stepTiming);
+      }, stepTiming + 100);
       
       return () => clearInterval(interval); 
     } 
