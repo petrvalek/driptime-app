@@ -1,6 +1,6 @@
 @tailwind base;
 body {
-  @apply min-h-screen font-montserrat;
+  @apply h-screen font-montserrat;
 }
 
 h1 {
@@ -44,7 +44,7 @@ p {
 }
 
 .pie-chart {
-  @apply absolute w-12 h-12 rounded-full -left-1 -top-1 -z-10;
+  @apply absolute w-12 h-12 transition-all rounded-full -left-1 -top-1 -z-10;
   transition: background 0.3s ease;
 }
 

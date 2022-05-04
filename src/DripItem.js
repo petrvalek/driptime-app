@@ -81,7 +81,7 @@ const DripItem = () => {
             size="lg"
             fullWidth
           >
-            Let’s start!
+            Ready?
           </Button>
         </Link>
       </div>
