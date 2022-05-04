@@ -64,44 +64,50 @@ const Steps = () => {
   });
 
   const [step, setStep] = useState(0);
-  const [pause, setPause] = useState(false);
+  const [pause, setPause] = useState(true);
   const [minutes, seconds] = useCountdown(DripData.steps.totalTime, pause);
+  var stepTiming = stepsArray[step].timing * 1000;
+  const [secondLeft, setSecondLeft] = useState(stepTiming);
 
   const handlePauseToggle = () => {
     setPause(!pause);
   };
 
   useEffect(() => {
-    if (!pause) {
-      if (step < stepsArray.length - 1) {
-        const stepTiming = stepsArray[step].timing * 1000;
-        const interval = setTimeout(() => {
-          setStep((step) => step + 1);
-        }, stepTiming + 100);
+    if (step < stepsArray.length - 1) {
+      const leftimer = setInterval(() => {
+        if (!pause) {
+          if (secondLeft > 0) {
+            setSecondLeft((t) => t - 1000);
+          } else {
+            clearInterval(leftimer);
+          }
+        }
+      }, 1000);
 
-        return () => clearInterval(interval);
-      }
+      const interval = setInterval(() => {
+        var i = step + 1;
+        if (!pause) {
+          setStep((step) => step + 1);
+          setSecondLeft(stepsArray[i].timing * 1000);
+        } else {
+          clearInterval(interval);
+        }
+      }, secondLeft);
+
+      return () => {
+        clearInterval(interval);
+        clearInterval(leftimer);
+      };
     }
-  }, [step, stepsArray.length, pause]);
+  }, [step, stepsArray.length, pause, secondLeft, stepTiming, stepsArray]);
 
   return (
     <div className="container">
-      <Appbar title={DripData.name} />
       <div className="mt-6 mb-6 text-2xl text-center font-patrick-hand">
         {minutes}
         <span>:</span>
         {seconds}
-      </div>
-      <div className="mb-10">
-        {stepsArray.map((item, i) => (
-          <StepItem
-            key={i}
-            timer={item.timing}
-            stepContent={item.content}
-            stepActive={step === i ? true : false}
-            stepPause={pause}
-          />
-        ))}
       </div>
       <div className="grid grid-cols-2 gap-4 mb-11">
         <Button
@@ -110,7 +116,7 @@ const Steps = () => {
           startIcon={pause ? continueIcon : pauseIcon}
           onClick={handlePauseToggle}
         >
-          {pause ? "Continue" : "Pause"}
+          {pause ? "Start" : "Pause"}
         </Button>
 
         <Link to="/home">
@@ -124,6 +130,29 @@ const Steps = () => {
           </Button>
         </Link>
       </div>
+      <div className="mb-10 pb-11">
+        {stepsArray.map((item, i) => (
+          <StepItem
+            key={i}
+            timer={stepsArray[i].timing}
+            stepContent={item.content}
+            stepActive={step === i ? true : false}
+            stepPause={pause}
+          />
+        ))}
+      </div>
+      {minutes === 0 && seconds < 8 && (
+        <Link to="/home">
+          <Button
+            className="block w-64 mx-auto mb-11"
+            color="primary"
+            size="lg"
+            fullWidth
+          >
+            Back to home
+          </Button>
+        </Link>
+      )}
     </div>
   );
 };
