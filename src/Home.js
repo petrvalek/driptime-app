@@ -1,13 +1,16 @@
 import React from "react";
 
 import { Card } from "react-daisyui";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   let homeData = [
     {
-      title: "Before you started",
-      content: "A few tips before you start dripping :-)",
+      title: t("HOME_TIPS_TITLE"),
+      content: t("HOME_TIPS_CONTENT"),
       link: "/before-you-started",
       img: "assets/driptime-logo.svg",
       side: true,
@@ -54,7 +57,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1 className="mt-10 text-lg">Choose your favourite tool</h1>
+      <h1 className="mt-10 text-lg">{t("HOME_TITLE")}</h1>
       <div className="grid grid-cols-2 gap-4 mt-6">
         {homeData.map((data, index) => (
           <Link

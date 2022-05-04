@@ -3,11 +3,11 @@ import { Link, useParams } from "react-router-dom";
 
 import { getDripDataPermalink } from "./DripData";
 
-import Appbar from "./Components/Appbar";
 import { useCountdown } from "./hooks/useCountdown";
 import StepItem from "./Components/StepItem";
 
 import { Button } from "react-daisyui";
+import { useTranslation } from "react-i18next";
 
 const pauseIcon = (
   <svg
@@ -58,6 +58,8 @@ const Steps = () => {
   let params = useParams();
   let DripData = getDripDataPermalink(params.permalink);
 
+  const { t } = useTranslation();
+
   const stepsArray = DripData.steps.instructions.map((item, i) => {
     const object = { timing: item.timing, content: item.content };
     return object;
@@ -103,7 +105,7 @@ const Steps = () => {
   }, [step, stepsArray.length, pause, secondLeft, stepTiming, stepsArray]);
 
   return (
-    <div className="container">
+    <div className="container mb-11">
       <div className="mt-6 mb-6 text-2xl text-center font-patrick-hand">
         {minutes}
         <span>:</span>
@@ -116,7 +118,7 @@ const Steps = () => {
           startIcon={pause ? continueIcon : pauseIcon}
           onClick={handlePauseToggle}
         >
-          {pause ? "Start" : "Pause"}
+          {pause ? "Start" : t("BUTTON_PAUSE")}
         </Button>
 
         <Link to="/home">
@@ -130,7 +132,7 @@ const Steps = () => {
           </Button>
         </Link>
       </div>
-      <div className="mb-10 pb-11">
+      <div className="pb-11">
         {stepsArray.map((item, i) => (
           <StepItem
             key={i}
@@ -144,12 +146,12 @@ const Steps = () => {
       {minutes === 0 && seconds < 8 && (
         <Link to="/home">
           <Button
-            className="block w-64 mx-auto mb-11"
+            className="block w-64 mx-auto"
             color="primary"
             size="lg"
             fullWidth
           >
-            Back to home
+            {t("BUTTON_BACK_HOME_FINISH")}
           </Button>
         </Link>
       )}

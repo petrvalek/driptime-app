@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 import { Button } from "react-daisyui";
 import { Link } from "react-router-dom";
 
 const Appbar = (props) => {
+  const { t } = useTranslation();
   const backIcon = (
     <svg
       width="24"
@@ -28,7 +30,7 @@ const Appbar = (props) => {
           variant="link"
           startIcon={backIcon}
         >
-          Home
+          {t("BUTTON_BACK_HOME")}
         </Button>
       </Link>
       <h1 className="flex-auto">{props.title}</h1>

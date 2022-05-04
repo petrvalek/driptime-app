@@ -10,34 +10,32 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Button } from "react-daisyui";
+import { useTranslation } from "react-i18next";
 
 const Onboarding = () => {
+  const { t } = useTranslation();
   let onboardingScreens = [
     {
       title: "V60 dripper",
-      content:
-        "One word - simplicity! The V60 producing very full taste of coffee with all its flavors. You can make bitter and sour coffee according to its origin.",
+      content: t("ONBOARDING_V60_ABOUT"),
       img: "assets/v60-dripper.svg",
       isLastitem: false,
     },
     {
       title: "FrenchPress",
-      content:
-        "Is the easiest brewer to master. It producing coffee with heaviest body of any brewing method. Rest coffee for a few minutes before serving.",
+      content: t("ONBOARDING_FRENCH_ABOUT"),
       img: "assets/frenchpress.svg",
       isLastitem: false,
     },
     {
       title: "Moka pot",
-      content:
-        "Every home in Italy has a Moka Pot. It's the closest to an espresso at home. The moka pot produces very heavy, dense coffee with a little crema.",
+      content: t("ONBOARDING_MOKA_ABOUT"),
       img: "assets/mokapot.svg",
       isLastitem: false,
     },
     {
       title: "AeroPress",
-      content:
-        "Best friend on the road! You can make a great espresso wherever you are e.g. in a campsite, in a caravan or in nature... imagination does not end.",
+      content: t("ONBOARDING_AERO_ABOUT"),
       img: "assets/aeropress.svg",
       isLastitem: true,
     },
@@ -67,7 +65,7 @@ const Onboarding = () => {
                   size="lg"
                   fullWidth
                 >
-                  Let’s brew it!
+                  {t("BUTTON_ONBOARDING")}
                 </Button>
               </Link>
             ) : (

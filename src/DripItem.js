@@ -7,8 +7,10 @@ import Appbar from "./Components/Appbar";
 import Roughness from "./Components/Roughness";
 import CupRange from "./Components/CupRange";
 import { Button, ButtonGroup } from "react-daisyui";
+import { useTranslation } from "react-i18next";
 
 const DripItem = () => {
+  const { t } = useTranslation();
   let params = useParams();
   let DripData = getDripDataPermalink(params.permalink);
 
@@ -32,7 +34,7 @@ const DripItem = () => {
               }}
               active={tab === 1 ? true : false}
             >
-              Normal
+              {t("RATIO_NORMAL")}
             </Button>
             <Button
               className="font-normal bg-transparent font-montserrat border-Secondary text-neutral"
@@ -42,12 +44,12 @@ const DripItem = () => {
               }}
               active={tab === 2 ? true : false}
             >
-              Strong
+              {t("RATIO_STRONG")}
             </Button>
           </ButtonGroup>
           <p className="flex mt-2 text-xs justify-evenly">
             <span>1:{DripData.ratio.normal}</span>
-            <span>Ratio</span>
+            <span>{t("RATIO")}</span>
             <span>1:{DripData.ratio.strong}</span>
           </p>
         </div>
@@ -59,7 +61,7 @@ const DripItem = () => {
         />
         <div className="text-center">
           <div className="mb-4">
-            <p className="text-sm font-semibold">Water temperature</p>
+            <p className="text-sm font-semibold">{t("WATER_TEMP")}</p>
             <p className="">
               <span>{DripData.temperature} °C</span>
               <span className="mx-2">/</span>
@@ -70,7 +72,7 @@ const DripItem = () => {
             </p>
           </div>
           <div className="mb-10">
-            <p className="text-sm font-semibold">Coffee roughness</p>
+            <p className="text-sm font-semibold">{t("COFFEE_ROUGHNESS")}</p>
             <Roughness intensity={DripData.roughness} />
           </div>
         </div>
@@ -81,7 +83,7 @@ const DripItem = () => {
             size="lg"
             fullWidth
           >
-            Ready?
+            {t("BUTTON_READY")}
           </Button>
         </Link>
       </div>

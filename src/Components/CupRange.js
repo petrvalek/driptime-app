@@ -1,8 +1,10 @@
 import { React } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Range } from "react-daisyui";
 
 const CupRange = ({ coffeeCup, setCoffeeCup, coffeeGrams, water }) => {
+  const { t } = useTranslation();
   const COFFEE_QTY = coffeeGrams * coffeeCup;
   const WATER_QTY = water * coffeeCup;
 
@@ -38,7 +40,7 @@ const CupRange = ({ coffeeCup, setCoffeeCup, coffeeGrams, water }) => {
             </g>
           </svg>
 
-          <span>Coffee</span>
+          <span>{t("COFFEE")}</span>
         </p>
       </div>
       <div className="flex flex-col">
@@ -52,7 +54,9 @@ const CupRange = ({ coffeeCup, setCoffeeCup, coffeeGrams, water }) => {
             onChange={handleChange}
           />
         </div>
-        <p className="mt-4 font-semibold text-center">{coffeeCup} cup(s)</p>
+        <p className="mt-4 font-semibold text-center">
+          {coffeeCup} {t("CUPS")}
+        </p>
       </div>
       <div className="flex flex-col items-center">
         <span className="mb-1">{WATER_QTY} ml</span>{" "}
@@ -72,7 +76,7 @@ const CupRange = ({ coffeeCup, setCoffeeCup, coffeeGrams, water }) => {
             />
           </svg>
 
-          <span>Water</span>
+          <span>{t("WATER")}</span>
         </p>
       </div>
     </div>
