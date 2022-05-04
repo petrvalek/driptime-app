@@ -41,8 +41,7 @@ let DripData = [
         },
         {
           timing: 30,
-          content:
-            "Waiting... coffee is dripping :-)",
+          content: "Waiting... coffee is dripping :-)",
         },
         {
           timing: 30,
@@ -51,8 +50,7 @@ let DripData = [
         },
         {
           timing: 10,
-          content:
-            "Enjoy your brew and taste your coffee!",
+          content: "Enjoy your brew and taste your coffee!",
         },
       ],
     },
