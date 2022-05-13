@@ -11,6 +11,7 @@ let DripData = [
       strong: 16.5, // g
     },
     roughness: 3, // /5
+    roughnessLabel: "Medium",
     water: 250, // ml
     temperature: 95, // C
     steps: {

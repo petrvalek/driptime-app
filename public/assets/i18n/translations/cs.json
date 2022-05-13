@@ -20,5 +20,13 @@
   "CUPS": "šálek(ů)",
   "WATER": "Voda",
   "WATER_TEMP": "Teplota vody",
-  "COFFEE_ROUGHNESS": "Hrubost mletí kávy"
+  "COFFEE_ROUGHNESS": "Hrubost mletí kávy",
+  "v60-dripper_STEP_0": "Papírový filtr zalijte horkou vodou.",
+  "v60-dripper_STEP_1": "Vylijte vodu z nádoby.",
+  "v60-dripper_STEP_2": "Nasypte kávu do kávového filtru.",
+  "v60-dripper_STEP_3": "krouživým pohybem zalijeme kávu vodou do množství přibližně 50 ml/g.",
+  "v60-dripper_STEP_4": "Po předinfúzi zalijeme kávu druhým krouživým pohybem na celkové množství 150 ml/g.",
+  "v60-dripper_STEP_5": "Čekáme... káva se překapává :-)",
+  "v60-dripper_STEP_6": "Při třetím zalévání opět krouživým pohybem zalijeme kávu na tolik šálků, kolik potřebujeme.",
+  "v60-dripper_STEP_7": "Jsme v cíli... Vychutnejte si svojí kávu!"
 }

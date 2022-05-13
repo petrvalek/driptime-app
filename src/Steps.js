@@ -137,7 +137,7 @@ const Steps = () => {
           <StepItem
             key={i}
             timer={stepsArray[i].timing}
-            stepContent={item.content}
+            stepContent={t(DripData.permalink + "_STEP_" + i)}
             stepActive={step === i ? true : false}
             stepPause={pause}
           />

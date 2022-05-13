@@ -74,6 +74,7 @@ const DripItem = () => {
           <div className="mb-10">
             <p className="text-sm font-semibold">{t("COFFEE_ROUGHNESS")}</p>
             <Roughness intensity={DripData.roughness} />
+            <p className="mt-2 text-xs">{DripData.roughnessLabel}</p>
           </div>
         </div>
         <Link to={`/${DripData.permalink}/steps`}>

@@ -20,5 +20,13 @@
   "CUPS": "cup(s)",
   "WATER": "Water",
   "WATER_TEMP": "Water temperature",
-  "COFFEE_ROUGHNESS": "Coffee roughness"
+  "COFFEE_ROUGHNESS": "Coffee roughness",
+  "v60-dripper_STEP_0": "Pour hot water over the paper filter.",
+  "v60-dripper_STEP_1": "Pour out the water from the container.",
+  "v60-dripper_STEP_2": "We pour the coffee into the v60-dripper drip and the first preinfusion comes",
+  "v60-dripper_STEP_3": "Pour it up to approx. 50 ml / g and thoroughly mix the coffee with water.",
+  "v60-dripper_STEP_4": "After preinfusion, pour the coffee in the second pour in a circular motion to a total of 150 ml / g",
+  "v60-dripper_STEP_5": "Waiting... coffee is dripping :-)",
+  "v60-dripper_STEP_6": "In the third pour, we pour coffee again in a circular motion for as many cups as we need.",
+  "v60-dripper_STEP_7": "Enjoy your brew and taste your coffee!"
 }
