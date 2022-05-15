@@ -5,6 +5,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Welcome from "./Welcome";
 import Onboarding from "./Onboarding";
+import Page from "./Page";
 import Home from "./Home";
 import DripItem from "./DripItem";
 import Steps from "./Steps";
@@ -54,6 +55,7 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path="welcome" element={<Onboarding />} />
           <Route path="home" element={<Home />} />
+          <Route path="before-you-started" element={<Page />} />
           <Route path=":permalink" element={<DripItem />} />
           <Route path=":permalink/steps" element={<Steps />} />
         </Routes>
