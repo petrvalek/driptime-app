@@ -10,6 +10,7 @@
   "HOME_TIPS_TITLE": "Pár tipů, než začnete",
   "HOME_TIPS_CONTENT": "Pár tipů, než začnete s přípravou kávy.",
   "TIPS_PAGE_TITLE": "Pár tipů, než začnete",
+  "AUTHORS_PAGE_TITLE": "Autoři",
   "COFFEE_ROUGHNESS_TIP_TITLE": "Legenda",
   "TOOLS_TITLE": "Dobré mít k přípravě",
   "TOOLS_GRINDER": "Mlýnek na kávu",
@@ -56,5 +57,10 @@
   "aeropress_STEP_2": "Do plastové nádoby nalijte dalších 220 ml vody",
   "aeropress_STEP_3": "Krouživými pohyby míchejte",
   "aeropress_STEP_4": "Zajistěte víčko, nasaďte na šálek a otočte aeropress",
-  "aeropress_STEP_5": "Pohybem stlačte, dokud se neozve syčivý zvuk... a poté si vychutnejte Vaší kávu!"
+  "aeropress_STEP_5": "Pohybem stlačte, dokud se neozve syčivý zvuk... a poté si vychutnejte Vaší kávu!",
+  "AUTHORS_ABOUT_LINK": "O aplikaci",
+  "SPECIAL_THANKS": "Poděkování za pomoc",
+  "SPECIAL_THANKS_CONTENT": "S laděním kódu a psaním logických funkcí.",
+  "BUG_TITLE": "Našli jste chybu nebo máte nápad na zlepšení?",
+  "BUG_CONTENT": "Neváhejte a pošlete mi zprávu :-)."
 }

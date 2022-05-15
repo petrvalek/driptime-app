@@ -95,6 +95,11 @@ const Home = () => {
           </Link>
         ))}
       </div>
+      <Link to="/authors">
+        <p className="mt-8 text-xs text-center underline">
+          {t("AUTHORS_ABOUT_LINK")}
+        </p>
+      </Link>
     </div>
   );
 };

@@ -9,6 +9,7 @@ import Page from "./Page";
 import Home from "./Home";
 import DripItem from "./DripItem";
 import Steps from "./Steps";
+import Authors from "./Authors";
 
 function App() {
   const location = useLocation();
@@ -56,6 +57,7 @@ function App() {
           <Route path="welcome" element={<Onboarding />} />
           <Route path="home" element={<Home />} />
           <Route path="before-you-started" element={<Page />} />
+          <Route path="authors" element={<Authors />} />
           <Route path=":permalink" element={<DripItem />} />
           <Route path=":permalink/steps" element={<Steps />} />
         </Routes>
