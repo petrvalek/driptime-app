@@ -74,7 +74,7 @@ const Home = () => {
                 )}
                 <Card.Title
                   tag="h2"
-                  className={`text-base font-semibold  ${
+                  className={`text-base font-semibold leading-5 ${
                     data.textCenter ? "self-center" : ""
                   }`}
                 >

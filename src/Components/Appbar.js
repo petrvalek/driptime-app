@@ -22,7 +22,7 @@ const Appbar = (props) => {
     </svg>
   );
   return (
-    <div className="flex items-center justify-center mt-2 mb-2">
+    <div className="flex items-center justify-center w-full mt-2 mb-2">
       <Link className="self-start flex-1" to="/home">
         <Button
           className="px-0 text-neutral"

@@ -56,11 +56,11 @@ const Onboarding = () => {
               alt={data.title}
             />
             <h1 className="mb-4">{data.title}</h1>
-            <p className="mb-16 text-base text-center">{data.content}</p>
+            <p className="text-base text-center mb-11">{data.content}</p>
             {data.isLastitem ? (
               <Link to="/home">
                 <Button
-                  className="absolute left-0 right-0 w-64 mx-auto bottom-4"
+                  className="w-64 mx-auto "
                   color="primary"
                   size="lg"
                   fullWidth

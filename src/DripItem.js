@@ -24,8 +24,8 @@ const DripItem = () => {
 
   return (
     <div className="container">
-      <Appbar title={DripData.name} />
-      <div className="flex flex-col items-center justify-around h-screen">
+      <div className="flex flex-col items-center justify-around h-screen min-h-screen">
+        <Appbar title={DripData.name} />
         <div>
           <ButtonGroup className="toggle-buttons">
             <Button
@@ -73,7 +73,7 @@ const DripItem = () => {
               </span>
             </p>
           </div>
-          <div className="mb-10">
+          <div className="mb-4">
             <p className="text-sm font-semibold">{t("COFFEE_ROUGHNESS")}</p>
             <Roughness intensity={DripData.roughness} />
             <p className="mt-2 text-xs">

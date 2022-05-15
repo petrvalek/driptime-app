@@ -25,6 +25,9 @@ p {
 
 .swiper-pagination {
   z-index: 1 !important;
+  margin-bottom: 44px !important;
+  top: 16px !important;
+  bottom: auto;
 }
 
 .btn-link {

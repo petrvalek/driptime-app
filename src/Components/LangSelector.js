@@ -82,7 +82,7 @@ const LangSelector = () => {
   };
 
   return (
-    <div>
+    <div className="mb-5">
       <p className="mb-3 text-sm font-semibold text-center">Language</p>
       <div
         className="flex items-center justify-between w-44"
