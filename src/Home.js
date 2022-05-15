@@ -96,7 +96,7 @@ const Home = () => {
         ))}
       </div>
       <Link to="/authors">
-        <p className="mt-8 text-xs text-center underline">
+        <p className="pb-10 mt-8 text-xs text-center underline">
           {t("AUTHORS_ABOUT_LINK")}
         </p>
       </Link>

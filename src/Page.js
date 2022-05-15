@@ -24,7 +24,7 @@ const Page = () => {
           <li>{t("TOOLS_Q_COFFEE")}</li>
         </ul>
       </div>
-      <div className="mt-10">
+      <div className="pb-10 mt-10">
         <h2 className="mb-4 text-lg font-semibold text-center">
           {t("COFFEE_ROUGHNESS_TIP_TITLE")}
         </h2>
