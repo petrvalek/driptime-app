@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Appbar from "./Components/Appbar";
-import Roughness from "./Components/Roughness";
 
 const Authors = () => {
   const { t } = useTranslation();

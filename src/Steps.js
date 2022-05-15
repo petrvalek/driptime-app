@@ -134,7 +134,7 @@ const Steps = () => {
           </Button>
         </Link>
       </div>
-      <div className="pb-11">
+      <div className="pb-10">
         {stepsArray.map((item, i) => (
           <StepItem
             key={i}
@@ -146,7 +146,7 @@ const Steps = () => {
         ))}
       </div>
       {minutes === 0 && seconds < 8 && (
-        <Link to="/home">
+        <Link to="/home" className="pb-10">
           <Button
             className="block w-64 mx-auto"
             color="primary"
