@@ -5,6 +5,7 @@ import { getDripDataPermalink } from "./DripData";
 
 import { useCountdown } from "./hooks/useCountdown";
 import StepItem from "./Components/StepItem";
+import Appbar from "./Components/Appbar";
 
 import { Button } from "react-daisyui";
 import { useTranslation } from "react-i18next";
@@ -106,6 +107,7 @@ const Steps = () => {
 
   return (
     <div className="container mb-11">
+      <Appbar title={DripData.name} />
       <div className="mt-6 mb-6 text-2xl text-center font-patrick-hand">
         {minutes}
         <span>:</span>
