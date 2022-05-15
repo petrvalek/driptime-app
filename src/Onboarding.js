@@ -49,7 +49,7 @@ const Onboarding = () => {
     >
       {onboardingScreens.map((data, i) => (
         <SwiperSlide key={i}>
-          <div className="container relative flex flex-col items-center justify-end h-screen min-h-screen">
+          <div className="container relative flex flex-col items-center justify-end h-screen">
             <img
               className="relative mx-auto mb-6"
               src={data.img}

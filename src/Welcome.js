@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 const Welcome = () => {
   const { t } = useTranslation();
   return (
-    <div className="relative flex flex-col items-center justify-end h-screen min-h-screen md:justify-center">
+    <div className="relative flex flex-col items-center justify-end h-screen md:justify-center">
       <LangSelector />
       <img
         className="relative mx-auto mt-16 mb-11"
