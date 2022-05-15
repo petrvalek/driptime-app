@@ -25,7 +25,7 @@ const Appbar = (props) => {
     <div className="flex items-center justify-center w-full mt-2 mb-2">
       <Link className="self-start flex-1" to="/home">
         <Button
-          className="px-0 text-neutral"
+          className="gap-0 px-0 text-neutral"
           size="lg"
           variant="link"
           startIcon={backIcon}

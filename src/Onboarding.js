@@ -49,18 +49,18 @@ const Onboarding = () => {
     >
       {onboardingScreens.map((data, i) => (
         <SwiperSlide key={i}>
-          <div className="container relative flex flex-col items-center justify-end h-screen pb-16">
+          <div className="container relative flex flex-col items-center justify-end h-screen">
             <img
-              className="relative mx-auto mb-12"
+              className="relative mx-auto mb-6"
               src={data.img}
               alt={data.title}
             />
             <h1 className="mb-4">{data.title}</h1>
-            <p className="text-base text-center mb-11">{data.content}</p>
+            <p className="mb-12 text-base text-center">{data.content}</p>
             {data.isLastitem ? (
               <Link to="/home">
                 <Button
-                  className="w-64 mx-auto "
+                  className="w-64 mx-auto mb-11"
                   color="primary"
                   size="lg"
                   fullWidth
