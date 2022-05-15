@@ -68,8 +68,35 @@ let DripData = [
       strong: 20, // g
     },
     roughness: 3, // /5
+    roughnessLabel: "Medium",
     water: 250, // ml
     temperature: 95, // C
+    steps: {
+      totalTime: 320, // in sec -> 5,20 min
+      instructions: [
+        {
+          timing: 10,
+          content: "We pour the coffee into the FrenchPress.",
+        },
+        {
+          timing: 10,
+          content:
+            "Pour all the water at once quickly, ensuring all grounds are wet",
+        },
+        {
+          timing: 230,
+          content: "Place plunger screen below this surface of the coffee",
+        },
+        {
+          timing: 10,
+          content: "Plunge the filter screen gently",
+        },
+        {
+          timing: 60,
+          content: "Wait one minute for coffee particles to settle, and serve",
+        },
+      ],
+    },
   },
   {
     name: "Moka Pot",
@@ -85,6 +112,36 @@ let DripData = [
     roughness: 4, // /5
     water: 220, // ml
     temperature: 99, // C
+    steps: {
+      totalTime: 85, // in sec -> 1,25 min
+      instructions: [
+        {
+          timing: 5,
+          content: "Fill the bottom of moka pot with boiling water",
+        },
+        {
+          timing: 5,
+          content: "Fill the filter basket with ground coffee",
+        },
+        {
+          timing: 10,
+          content: "Insert the filter (grounds side up) and cover the moka",
+        },
+        {
+          timing: 40,
+          content: "Set the pot on the stove over a low-to-medium heat",
+        },
+        {
+          timing: 15,
+          content:
+            "When the coffee bubbles and spurts, remove the Moka Pot from the stove",
+        },
+        {
+          timing: 10,
+          content: "Cool down the Moka Pot with cold water",
+        },
+      ],
+    },
   },
   {
     name: "Aeropress",
@@ -100,6 +157,35 @@ let DripData = [
     roughness: 5, // /5
     water: 250, // ml
     temperature: 95, // C
+    steps: {
+      totalTime: 95, // in sec -> 1,35 min
+      instructions: [
+        {
+          timing: 10,
+          content: "Pour 30ml (1 oz) wetting all the grounds",
+        },
+        {
+          timing: 20,
+          content: "Wait, allowing the coffee to bloom",
+        },
+        {
+          timing: 10,
+          content: "Pour 220ml (7.5 oz) more into the chamber",
+        },
+        {
+          timing: 10,
+          content: "Use the stirrer in a circular motion",
+        },
+        {
+          timing: 30,
+          content: "Secure cap, place cup on top and flip the aeropress",
+        },
+        {
+          timing: 15,
+          content: "Plunge until hissing sound",
+        },
+      ],
+    },
   },
 ];
 

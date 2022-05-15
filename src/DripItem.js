@@ -18,6 +18,8 @@ const DripItem = () => {
   const [coffeeCup, setCoffeeCup] = useState(1);
   const [coffeeGrams, setCoffeeGrams] = useState(DripData.coffee.normal);
 
+  const roughnessLabel = ["", "Roughly", "2", "Medium", "Gently", "Softly"];
+
   const convertToF = (e) => ((+parseInt(e) * 9) / 5 + 32).toFixed(0);
 
   return (
@@ -74,7 +76,9 @@ const DripItem = () => {
           <div className="mb-10">
             <p className="text-sm font-semibold">{t("COFFEE_ROUGHNESS")}</p>
             <Roughness intensity={DripData.roughness} />
-            <p className="mt-2 text-xs">{DripData.roughnessLabel}</p>
+            <p className="mt-2 text-xs">
+              {t([roughnessLabel[DripData.roughness]])}
+            </p>
           </div>
         </div>
         <Link to={`/${DripData.permalink}/steps`}>
