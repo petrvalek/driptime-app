@@ -32,6 +32,7 @@ p {
 
 .btn-link {
   padding-left: 0 !important;
+  gap: 0 !important;
 }
 
 .coffee-range {
