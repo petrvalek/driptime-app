@@ -31,6 +31,25 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript">
+      window.smartlook ||
+        (function (d) {
+          var o = (smartlook = function () {
+              o.api.push(arguments);
+            }),
+            h = d.getElementsByTagName("head")[0];
+          var c = d.createElement("script");
+          o.api = new Array();
+          c.async = true;
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.src = "https://web-sdk.smartlook.com/recorder.js";
+          h.appendChild(c);
+        })(document);
+      smartlook("init", "fee9feeadb21849c787d1c7dc8100e7f273741d3", {
+        region: "eu",
+      });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
