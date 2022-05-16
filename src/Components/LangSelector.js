@@ -85,10 +85,14 @@ const LangSelector = () => {
     <div className="mt-4 mb-2">
       <p className="mb-3 text-sm font-semibold text-center">Language</p>
       <div
-        className="flex items-center justify-between w-44"
+        className="flex items-center justify-between gap-4"
         onChange={changeLanguage}
       >
-        <label className="flex items-center justify-between">
+        <label
+          className={`flex items-center justify-between px-3 py-2 border border-base-200 rounded-full ${
+            selectedLang === "en" && "bg-base-200"
+          }`}
+        >
           <input
             className="hidden"
             type="radio"
@@ -99,13 +103,17 @@ const LangSelector = () => {
           {englishFlag}
           <span
             className={`pl-2 text-sm ${
-              selectedLang === "en" && "font-semibold text-primary"
+              selectedLang === "en" && "font-semibold"
             }`}
           >
             English
           </span>
         </label>
-        <label className="flex items-center justify-between">
+        <label
+          className={`flex items-center justify-between px-3 py-2 border border-base-200 rounded-full ${
+            selectedLang === "cs" && "bg-base-200"
+          }`}
+        >
           <input
             className="hidden"
             type="radio"
@@ -116,7 +124,7 @@ const LangSelector = () => {
           {czechFlag}
           <span
             className={`pl-2 text-sm ${
-              selectedLang === "cs" && "font-semibold text-primary"
+              selectedLang === "cs" && "font-semibold "
             }`}
           >
             Czech
