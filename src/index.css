@@ -24,7 +24,8 @@ p {
 }
 
 .swiper-pagination {
-  z-index: 1 !important;
+  /* z-index: 1 !important; */
+  height: max-content !important;
   margin-bottom: 44px !important;
   top: 16px !important;
   bottom: auto;
