@@ -89,7 +89,7 @@ const LangSelector = () => {
         onChange={changeLanguage}
       >
         <label
-          className={`flex items-center justify-between px-3 py-2 border border-base-200 rounded-full ${
+          className={`flex items-center justify-between px-3 py-2 border border-base-200 rounded-full cursor-pointer ${
             selectedLang === "en" && "bg-base-200"
           }`}
         >
@@ -110,7 +110,7 @@ const LangSelector = () => {
           </span>
         </label>
         <label
-          className={`flex items-center justify-between px-3 py-2 border border-base-200 rounded-full ${
+          className={`flex items-center justify-between px-3 py-2 border border-base-200 rounded-full cursor-pointer ${
             selectedLang === "cs" && "bg-base-200"
           }`}
         >
