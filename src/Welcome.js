@@ -11,7 +11,7 @@ const Welcome = () => {
     <div className="relative flex flex-col items-center justify-end h-screen md:justify-center">
       <LangSelector />
       <img
-        className="relative mx-auto mt-16 mb-11"
+        className="relative mx-auto mt-5 mb-11"
         src="assets/driptime-logo.svg"
         alt="Driptime - Welcome"
       />
