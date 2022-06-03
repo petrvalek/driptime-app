@@ -83,5 +83,19 @@ p {
   }
 }
 
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  @apply text-Additional-GreenGray z-50;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next:after {
+  @apply text-xl;
+}
+
+.swiper .swiper-button-disabled {
+  @apply hidden;
+}
+
 @tailwind components;
 @tailwind utilities;

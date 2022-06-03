@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Import Swiper React components
-import { Pagination, A11y } from "swiper";
+import { Pagination, Navigation, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import { Button } from "react-daisyui";
 import { useTranslation } from "react-i18next";
@@ -42,10 +43,13 @@ const Onboarding = () => {
   ];
   return (
     <Swiper
-      modules={[Pagination, A11y]}
+      modules={[Pagination, Navigation, A11y]}
       spaceBetween={0}
       slidesPerView={1}
-      pagination={{ clickable: true }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation
     >
       {onboardingScreens.map((data, i) => (
         <SwiperSlide key={i}>
