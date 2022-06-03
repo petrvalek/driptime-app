@@ -63,6 +63,15 @@ const Authors = () => {
           hello@valekpetr.com
         </a>
       </div>
+      <div className="mt-10">
+        <p className="mb-2 text-sm font-semibold">Credits</p>
+        <a
+          className="text-sm"
+          href="https://www.freepik.com/vectors/cafe-pattern"
+        >
+          Cafe pattern vector created by rawpixel.com - www.freepik.com
+        </a>
+      </div>
     </div>
   );
 };
