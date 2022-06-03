@@ -187,6 +187,46 @@ let DripData = [
       ],
     },
   },
+  {
+    name: "ColdBrew",
+    permalink: "coldbrew",
+    ratio: {
+      normal: 14, // 1:xx
+      strong: 10, // 1:xx
+    },
+    coffee: {
+      normal: 17, // g
+      strong: 25, // g
+    },
+    roughness: 3, // /3
+    water: 250, // ml
+    temperature: 3, // C
+    steps: {
+      totalTime: 75, // in sec -> 1,15 min
+      instructions: [
+        {
+          timing: 15,
+          content: "Pour 30ml (1 oz) wetting all the grounds",
+        },
+        {
+          timing: 15,
+          content: "Wait, allowing the coffee to bloom",
+        },
+        {
+          timing: 20,
+          content: "Pour 220ml (7.5 oz) more into the chamber",
+        },
+        {
+          timing: 10,
+          content: "Use the stirrer in a circular motion",
+        },
+        {
+          timing: 15,
+          content: "Use the stirrer in a circular motion",
+        },
+      ],
+    },
+  },
 ];
 
 export function getDripData() {

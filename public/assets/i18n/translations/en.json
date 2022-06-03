@@ -62,5 +62,11 @@
   "SPECIAL_THANKS": "Special thanks to",
   "SPECIAL_THANKS_CONTENT": "My friend Václav Zeman help me with code debugging and logical functions.",
   "BUG_TITLE": "Did you find a bug or do you have an idea for improvement?",
-  "BUG_CONTENT": "Feel free to send me a message :-)."
+  "BUG_CONTENT": "Feel free to send me a message :-).",
+  "HOME_COLDBREW_CONTENT": "Fresh up in summer, ideally in combination with a tonic water",
+  "coldbrew_STEP_0": "Grind the coffee beans roughly according to how many cups you want",
+  "coldbrew_STEP_1": "Pour the coffee into a large closable jar",
+  "coldbrew_STEP_2": "Pour cold running water over the coffee and put in the fridge",
+  "coldbrew_STEP_3": "Leave in the fridge for at least 12 hours",
+  "coldbrew_STEP_4": "Before serving, it filters through a paper filter... and then freshen up, preferably in combination with a tonic"
 }

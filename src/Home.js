@@ -12,7 +12,17 @@ const Home = () => {
       title: t("HOME_TIPS_TITLE"),
       content: t("HOME_TIPS_CONTENT"),
       link: "/before-you-started",
-      img: "assets/driptime-logo.svg",
+      img: "assets/welcome-driptime.svg",
+      side: true,
+      fullWidth: true,
+      textCenter: false,
+    },
+    {
+      title: "ColdBrew",
+      badge: "SUMMER EDITION",
+      content: t("HOME_COLDBREW_CONTENT"),
+      link: "/coldbrew",
+      img: "assets/coldbrew-single.svg",
       side: true,
       fullWidth: true,
       textCenter: false,
@@ -72,6 +82,11 @@ const Home = () => {
                 ) : (
                   ""
                 )}
+                {data.badge && (
+                  <p className="inline-block w-max mb-1 text-Background-Base-100 text-xxs text-white px-2 rounded-full font-semibold bg-Primary">
+                    {data.badge}
+                  </p>
+                )}
                 <Card.Title
                   tag="h2"
                   className={`text-base font-semibold leading-5 ${
@@ -83,11 +98,7 @@ const Home = () => {
                 <p className="text-sm ">{data.content}</p>
               </Card.Body>
               {data.fullWidth ? (
-                <Card.Image
-                  src={data.img}
-                  alt={data.title}
-                  className="w-10/12"
-                />
+                <Card.Image src={data.img} alt={data.title} className=" w-24" />
               ) : (
                 ""
               )}

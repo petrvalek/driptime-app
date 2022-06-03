@@ -5,7 +5,7 @@
   "BUTTON_BACK_HOME": "Domů",
   "BUTTON_READY": "Připraven?",
   "BUTTON_PAUSE": "Pozastavit",
-  "BUTTON_BACK_HOME_FINISH": "Objevit další přípravy",
+  "BUTTON_BACK_HOME_FINISH": "Objev další přípravy",
   "HOME_TITLE": "Vyberte si svůj oblíbený \"kávovar\"",
   "HOME_TIPS_TITLE": "Pár tipů, než začnete",
   "HOME_TIPS_CONTENT": "Pár tipů, než začnete s přípravou kávy.",
@@ -62,5 +62,11 @@
   "SPECIAL_THANKS": "Poděkování za pomoc",
   "SPECIAL_THANKS_CONTENT": "S konzultací kódu a logických funkcí.",
   "BUG_TITLE": "Našli jste chybu nebo máte nápad na zlepšení?",
-  "BUG_CONTENT": "Neváhejte a pošlete mi zprávu :-)."
+  "BUG_CONTENT": "Neváhejte a pošlete mi zprávu :-).",
+  "HOME_COLDBREW_CONTENT": "Osvěžte se v létě ideálně v kombinaci s tonikem",
+  "coldbrew_STEP_0": "Umelte kávové zrna na hrubo podle toho kolik chcete šálků",
+  "coldbrew_STEP_1": "Nasypte kávu do velké uzavíratelné sklenice",
+  "coldbrew_STEP_2": "Zalijte kávu studenou tekoucí vodou a dejte do lednice",
+  "coldbrew_STEP_3": "V lednici nechte uležet aspoň 12 hodin",
+  "coldbrew_STEP_4": "Před podáváním přefiltruje skrze papírový filtr... a poté se osvěžte nejlépe v kombinaci s tonikem"
 }
