@@ -4,9 +4,11 @@ import { Button } from "react-daisyui";
 
 import LangSelector from "./Components/LangSelector";
 import { useTranslation } from "react-i18next";
+import { useCookies } from "react-cookie";
 
 const Welcome = () => {
   const { t } = useTranslation();
+  const [cookies, setCookie] = useCookies();
   return (
     <div className="relative flex flex-col items-center justify-end h-screen md:justify-center">
       <LangSelector />
@@ -17,7 +19,7 @@ const Welcome = () => {
       />
       <h1 className="mb-4 text-2xl">DripTime</h1>
       <p className="mb-10 text-base text-center">{t("CLAIM")}</p>
-      <Link to="/welcome">
+      <Link to={`${cookies.user ? "/home" : "/welcome"}`}>
         <Button className="w-64 mb-11" color="primary" size="lg" fullWidth>
           {t("BUTTON_WELCOME")}
         </Button>

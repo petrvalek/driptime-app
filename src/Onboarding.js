@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 // Import Swiper React components
 import { Pagination, Navigation, A11y } from "swiper";
@@ -15,6 +16,7 @@ import { useTranslation } from "react-i18next";
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  const [cookies, setCookie] = useCookies(["user"]);
   let onboardingScreens = [
     {
       title: "V60 dripper",
@@ -41,6 +43,13 @@ const Onboarding = () => {
       isLastitem: true,
     },
   ];
+
+  function handleCookie() {
+    setCookie("user", "onboarded", {
+      path: "/",
+    });
+  }
+
   return (
     <Swiper
       modules={[Pagination, Navigation, A11y]}
@@ -68,6 +77,7 @@ const Onboarding = () => {
                   color="primary"
                   size="lg"
                   fullWidth
+                  onClick={handleCookie}
                 >
                   {t("BUTTON_ONBOARDING")}
                 </Button>
