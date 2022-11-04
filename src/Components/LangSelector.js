@@ -99,6 +99,7 @@ const LangSelector = () => {
             value="en"
             name="language"
             checked={selectedLang === "en"}
+            readOnly
           />
           {englishFlag}
           <span
@@ -120,6 +121,7 @@ const LangSelector = () => {
             value="cs"
             name="language"
             checked={selectedLang === "cs"}
+            readOnly
           />
           {czechFlag}
           <span
