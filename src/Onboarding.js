@@ -45,8 +45,12 @@ const Onboarding = () => {
   ];
 
   function handleCookie() {
+     let d = new Date();
+    d.setTime(d.getTime() + (minutes*60*1000));
+    
     setCookie("user", "onboarded", {
       path: "/",
+      expires: d,
     });
   }
 
