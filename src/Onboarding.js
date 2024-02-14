@@ -49,7 +49,7 @@ const Onboarding = () => {
     
     setCookie("user", "onboarded", {
       path: "/",
-      expires: d,
+      expires: d
     });
   }
 
